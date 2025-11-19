@@ -43,3 +43,10 @@ No contexto de CI/CD, uma pipeline é usada para integrar código (CI) e entrega
 Como versionar código (Git);
 Como empacotar e orquestrar containers (Docker e Kubernetes).
 Cada etapa da pipeline é uma tarefa, como compilar o código, rodar testes ou fazer o deploy da aplicação. Essas tarefas são executadas de forma contínua sempre que há uma mudança no código, garantindo um fluxo eficiente e sem interrupções.
+
+# Listar as revisões da aplicação
+argocd app history fortune-cookie
+
+# Aplica o rollback no app selecionando o ID da revisão
+argocd app rollback fortune-cookie 1
+argocd app rollback fortune-cookie --revision 1
